@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sai Teja Muramalla</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+    <title>Sai Teja Muramalla | Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
     <style>
         /* --- 1. GENERAL STYLES --- */
@@ -12,68 +13,99 @@
             margin: 0;
             padding: 0;
             font-family: 'Poppins', sans-serif;
-            background-color: #1a1a1a; /* Dark artistic background */
-            color: #ffffff;
+            background-color: #121212; /* Deep dark background */
+            color: #e0e0e0;
             line-height: 1.6;
         }
 
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
+        a { text-decoration: none; color: inherit; }
 
-        /* --- 2. HERO SECTION (The Top Part) --- */
+        /* --- 2. HERO SECTION --- */
         .hero {
-            height: 100vh; /* Full screen height */
+            min-height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); /* Artistic Gradient */
-            animation: fadeIn 2s ease-in;
+            background: radial-gradient(circle at center, #2c3e50 0%, #000000 100%);
+            padding: 20px;
         }
 
         .hero h1 {
-            font-size: 4rem;
+            font-size: 3.5rem;
             margin: 0;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            background: -webkit-linear-gradient(#eee, #333);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent; /* Metallic text effect */
+            text-shadow: 0px 4px 10px rgba(255,255,255,0.1);
         }
 
-        .hero p {
-            font-size: 1.5rem;
+        .hero .subtitle {
+            font-size: 1.2rem;
+            color: #a0a0a0;
             margin-top: 10px;
-            opacity: 0.9;
+            max-width: 600px;
         }
 
-        .btn {
+        .hero .btn {
             margin-top: 30px;
             padding: 12px 30px;
-            background: white;
-            color: #764ba2;
+            background: transparent;
+            border: 2px solid #667eea;
+            color: #667eea;
             font-weight: bold;
             border-radius: 30px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            transition: all 0.3s ease;
+            cursor: pointer;
         }
 
-        .btn:hover {
-            transform: translateY(-5px); /* Interactive lift effect */
-            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        .hero .btn:hover {
+            background: #667eea;
+            color: white;
+            box-shadow: 0 0 15px #667eea;
         }
 
-        /* --- 3. PROJECTS SECTION --- */
+        /* --- 3. SKILLS SECTION --- */
+        .skills-bar {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        
+        .skill-tag {
+            background: #1e1e1e;
+            padding: 8px 16px;
+            border-radius: 20px;
+            border: 1px solid #333;
+            font-size: 0.9rem;
+            color: #ccc;
+        }
+
+        /* --- 4. PROJECTS SECTION --- */
         .container {
             max-width: 1000px;
             margin: 0 auto;
-            padding: 50px 20px;
+            padding: 80px 20px;
         }
 
-        h2 {
+        .section-title {
             text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 40px;
-            border-bottom: 2px solid #764ba2;
-            display: inline-block;
+            font-size: 2rem;
+            margin-bottom: 50px;
+            color: #fff;
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background: #667eea;
+            margin: 10px auto 0;
         }
 
         .project-grid {
@@ -83,105 +115,154 @@
         }
 
         .project-card {
-            background: #2a2a2a;
-            border-radius: 15px;
+            background: #1e1e1e;
+            border-radius: 12px;
             padding: 25px;
-            transition: transform 0.3s ease;
-            position: relative;
-            overflow: hidden;
+            border: 1px solid #333;
+            transition: transform 0.3s ease, border-color 0.3s ease;
         }
 
         .project-card:hover {
-            transform: scale(1.03); /* Zoom effect on hover */
-            background: #333;
+            transform: translateY(-5px);
+            border-color: #667eea;
         }
 
         .project-card h3 {
-            color: #a3bffa;
+            color: #fff;
             margin-top: 0;
+            font-size: 1.4rem;
         }
 
-        .tag {
+        .project-card p {
+            font-size: 0.95rem;
+            color: #aaa;
+            margin-bottom: 20px;
+        }
+
+        .tech-stack {
+            margin-bottom: 20px;
+        }
+
+        .tech-stack span {
             display: inline-block;
-            background: #764ba2;
-            padding: 5px 10px;
-            border-radius: 5px;
-            font-size: 0.8rem;
+            font-size: 0.75rem;
+            color: #667eea;
+            background: rgba(102, 126, 234, 0.1);
+            padding: 4px 8px;
+            border-radius: 4px;
             margin-right: 5px;
-            margin-top: 10px;
+            margin-bottom: 5px;
         }
 
-        /* --- 4. FOOTER --- */
+        .card-link {
+            color: #fff;
+            font-weight: 600;
+            border-bottom: 1px solid #667eea;
+            padding-bottom: 2px;
+            transition: color 0.3s;
+        }
+
+        .card-link:hover { color: #667eea; }
+
+        /* --- 5. FOOTER --- */
         footer {
             text-align: center;
-            padding: 40px;
-            background: #111;
-            font-size: 0.9rem;
+            padding: 50px 20px;
+            background: #000;
+            border-top: 1px solid #222;
+        }
+        
+        .social-links a {
+            font-size: 1.5rem;
+            margin: 0 15px;
             color: #888;
+            transition: color 0.3s;
         }
+        
+        .social-links a:hover { color: #667eea; }
 
-        /* --- 5. ANIMATIONS --- */
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        /* Mobile Adjustments */
-        @media (max-width: 600px) {
-            .hero h1 { font-size: 2.5rem; }
-        }
     </style>
 </head>
 <body>
 
     <section class="hero">
-        <h1>Hello, I'm Sai Teja Muramalla</h1>
-        <p>Data Analyst | Researcher | Epidemiologies | Biostatistician</p>
-        <a href="#projects" class="btn">View My Work</a>
+        <h1>Sai Teja Muramalla</h1>
+        <p class="subtitle">Master's in International Community Health | Data Analyst<br>Specializing in Biostatistics & Epidemiology</p>
+        
+        <div class="skills-bar">
+            <span class="skill-tag">R Programming</span>
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">Epidemiology</span>
+            <span class="skill-tag">Biostatistics</span>
+            <span class="skill-tag">SQL</span>
+            <span class="skill-tag">Tableau</span>
+        </div>
+
+        <a href="#projects" class="btn">View My Research</a>
     </section>
 
     <div class="container" id="projects">
-        <div style="text-align: center;">
-            <h2>My Projects</h2>
-        </div>
+        <h2 class="section-title">Selected Projects</h2>
 
         <div class="project-grid">
             
             <div class="project-card">
-                <h3>Antimicrobial Resistance Analysis</h3>
-                <p>An in-depth statistical analysis of health literacy and AMR trends using R and Python. This project visualizes key correlations in public health data.</p>
-                <div class="tag">R Language</div>
-                <div class="tag">Statistics</div>
-                <br><br>
-                <a href="https://github.com/Steja715/repository-name-here" style="text-decoration: underline; color: #fff;">View Code &rarr;</a>
+                <h3>AMR & Health Literacy Analysis</h3>
+                <p>Master's thesis project conducted in Baddi, India. Investigated community health literacy and antimicrobial resistance (AMR) awareness using statistical modeling on primary field data from 450 community members.</p>
+                <div class="tech-stack">
+                    <span>R Programming</span>
+                    <span>ANOVA</span>
+                    <span>Regression Models</span>
+                    <span>Epidemiology</span>
+                </div>
+                <a href="#" class="card-link">View Project &rarr;</a>
             </div>
 
             <div class="project-card">
-                <h3>Interactive Dashboard</h3>
-                <p>A dynamic dashboard built to track real-time data metrics. Features include responsive charts and downloadable reports.</p>
-                <div class="tag">Python</div>
-                <div class="tag">Data Viz</div>
-                <br><br>
-                <a href="#" style="text-decoration: underline; color: #fff;">View Code &rarr;</a>
+                <h3>Breast Cancer Survival Analysis</h3>
+                <p>Independent project conducting time-to-event analysis on clinical datasets. Implemented Kaplan-Meier estimators and Cox Proportional Hazards models to estimate patient survival probabilities.</p>
+                <div class="tech-stack">
+                    <span>R</span>
+                    <span>Survival Analysis</span>
+                    <span>Cox Models</span>
+                    <span>Data Viz</span>
+                </div>
+                <a href="#" class="card-link">View Project &rarr;</a>
             </div>
 
             <div class="project-card">
-                <h3>Machine Learning Model</h3>
-                <p>A predictive model designed to forecast trends based on historical datasets. Achieved 95% accuracy in testing.</p>
-                <div class="tag">ML</div>
-                <div class="tag">Scikit-Learn</div>
-                <br><br>
-                <a href="#" style="text-decoration: underline; color: #fff;">View Code &rarr;</a>
+                <h3>Tanzania DHS Data Analysis</h3>
+                <p>Secondary data analysis of the Demographic and Health Survey (DHS) for Tanzania. Examined public health trends and socioeconomic determinants using complex survey design weighting.</p>
+                <div class="tech-stack">
+                    <span>R</span>
+                    <span>Survey Analysis</span>
+                    <span>Clustering</span>
+                    <span>Public Health</span>
+                </div>
+                <a href="#" class="card-link">View Project &rarr;</a>
+            </div>
+
+            <div class="project-card">
+                <h3>CoronaNet Research Project</h3>
+                <p>Collected and coded national COVID-19 policy measures for Iceland. Conducted data cleaning and validation for comparative pandemic-response analysis.</p>
+                <div class="tech-stack">
+                    <span>Data Cleaning</span>
+                    <span>Policy Analysis</span>
+                    <span>Research</span>
+                </div>
+                <a href="#" class="card-link">View Project &rarr;</a>
             </div>
 
         </div>
     </div>
 
     <footer>
-        <p>Connect with me on <a href="https://github.com/Steja715" style="color: white;">GitHub</a></p>
-        <p>&copy; 2026 Steja. Hosted on GitHub Pages.</p>
+        <div class="social-links">
+            <a href="https://github.com/Steja715" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="mailto:sai.teja986@gmail.com"><i class="fas fa-envelope"></i></a>
+        </div>
+        <p style="margin-top: 20px; color: #555;">&copy; 2026 Sai Teja Muramalla</p>
     </footer>
 
 </body>
 </html>
-

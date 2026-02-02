@@ -1,247 +1,186 @@
-<!DOCTYPE HTML>
-<!--
-	Phantom by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>SAI TEJA MURAMALLA</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
-		<!-- Wrapper -->
-			<div id="wrapper">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- 1. GENERAL STYLES --- */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #1a1a1a; /* Dark artistic background */
+            color: #ffffff;
+            line-height: 1.6;
+        }
 
-				<!-- Header -->
-					<header id="header">
-						<div class="inner">
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
 
-							<!-- Logo -->
-								<a href="index.html" class="logo">
-									<span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">Phantom</span>
-								</a>
+        /* --- 2. HERO SECTION (The Top Part) --- */
+        .hero {
+            height: 100vh; /* Full screen height */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); /* Artistic Gradient */
+            animation: fadeIn 2s ease-in;
+        }
 
-							<!-- Nav -->
-								<nav>
-									<ul>
-										<li><a href="#menu">Menu</a></li>
-									</ul>
-								</nav>
+        .hero h1 {
+            font-size: 4rem;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
 
-						</div>
-					</header>
+        .hero p {
+            font-size: 1.5rem;
+            margin-top: 10px;
+            opacity: 0.9;
+        }
 
-				<!-- Menu -->
-					<nav id="menu">
-						<h2>Menu</h2>
-						<ul>
-							<li><a href="index.html">Home</a></li>
-							<li><a href="generic.html">Ipsum veroeros</a></li>
-							<li><a href="generic.html">Tempus etiam</a></li>
-							<li><a href="generic.html">Consequat dolor</a></li>
-							<li><a href="elements.html">Elements</a></li>
-						</ul>
-					</nav>
+        .btn {
+            margin-top: 30px;
+            padding: 12px 30px;
+            background: white;
+            color: #764ba2;
+            font-weight: bold;
+            border-radius: 30px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
 
-				<!-- Main -->
-					<div id="main">
-						<div class="inner">
-							<header>
-								<h1>This is Phantom, a free, fully responsive site<br />
-								template designed by <a href="http://html5up.net">HTML5 UP</a>.</h1>
-								<p>Etiam quis viverra lorem, in semper lorem. Sed nisl arcu euismod sit amet nisi euismod sed cursus arcu elementum ipsum arcu vivamus quis venenatis orci lorem ipsum et magna feugiat veroeros aliquam. Lorem ipsum dolor sit amet nullam dolore.</p>
-							</header>
-							<section class="tiles">
-								<article class="style1">
-									<span class="image">
-										<img src="images/pic01.jpg" alt="" />
-									</span>
-									<a href="generic.html">
-										<h2>Magna</h2>
-										<div class="content">
-											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
-										</div>
-									</a>
-								</article>
-								<article class="style2">
-									<span class="image">
-										<img src="images/pic02.jpg" alt="" />
-									</span>
-									<a href="generic.html">
-										<h2>Lorem</h2>
-										<div class="content">
-											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
-										</div>
-									</a>
-								</article>
-								<article class="style3">
-									<span class="image">
-										<img src="images/pic03.jpg" alt="" />
-									</span>
-									<a href="generic.html">
-										<h2>Feugiat</h2>
-										<div class="content">
-											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
-										</div>
-									</a>
-								</article>
-								<article class="style4">
-									<span class="image">
-										<img src="images/pic04.jpg" alt="" />
-									</span>
-									<a href="generic.html">
-										<h2>Tempus</h2>
-										<div class="content">
-											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
-										</div>
-									</a>
-								</article>
-								<article class="style5">
-									<span class="image">
-										<img src="images/pic05.jpg" alt="" />
-									</span>
-									<a href="generic.html">
-										<h2>Aliquam</h2>
-										<div class="content">
-											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
-										</div>
-									</a>
-								</article>
-								<article class="style6">
-									<span class="image">
-										<img src="images/pic06.jpg" alt="" />
-									</span>
-									<a href="generic.html">
-										<h2>Veroeros</h2>
-										<div class="content">
-											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
-										</div>
-									</a>
-								</article>
-								<article class="style2">
-									<span class="image">
-										<img src="images/pic07.jpg" alt="" />
-									</span>
-									<a href="generic.html">
-										<h2>Ipsum</h2>
-										<div class="content">
-											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
-										</div>
-									</a>
-								</article>
-								<article class="style3">
-									<span class="image">
-										<img src="images/pic08.jpg" alt="" />
-									</span>
-									<a href="generic.html">
-										<h2>Dolor</h2>
-										<div class="content">
-											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
-										</div>
-									</a>
-								</article>
-								<article class="style1">
-									<span class="image">
-										<img src="images/pic09.jpg" alt="" />
-									</span>
-									<a href="generic.html">
-										<h2>Nullam</h2>
-										<div class="content">
-											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
-										</div>
-									</a>
-								</article>
-								<article class="style5">
-									<span class="image">
-										<img src="images/pic10.jpg" alt="" />
-									</span>
-									<a href="generic.html">
-										<h2>Ultricies</h2>
-										<div class="content">
-											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
-										</div>
-									</a>
-								</article>
-								<article class="style6">
-									<span class="image">
-										<img src="images/pic11.jpg" alt="" />
-									</span>
-									<a href="generic.html">
-										<h2>Dictum</h2>
-										<div class="content">
-											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
-										</div>
-									</a>
-								</article>
-								<article class="style4">
-									<span class="image">
-										<img src="images/pic12.jpg" alt="" />
-									</span>
-									<a href="generic.html">
-										<h2>Pretium</h2>
-										<div class="content">
-											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
-										</div>
-									</a>
-								</article>
-							</section>
-						</div>
-					</div>
+        .btn:hover {
+            transform: translateY(-5px); /* Interactive lift effect */
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
 
-				<!-- Footer -->
-					<footer id="footer">
-						<div class="inner">
-							<section>
-								<h2>Get in touch</h2>
-								<form method="post" action="#">
-									<div class="fields">
-										<div class="field half">
-											<input type="text" name="name" id="name" placeholder="Name" />
-										</div>
-										<div class="field half">
-											<input type="email" name="email" id="email" placeholder="Email" />
-										</div>
-										<div class="field">
-											<textarea name="message" id="message" placeholder="Message"></textarea>
-										</div>
-									</div>
-									<ul class="actions">
-										<li><input type="submit" value="Send" class="primary" /></li>
-									</ul>
-								</form>
-							</section>
-							<section>
-								<h2>Follow</h2>
-								<ul class="icons">
-									<li><a href="#" class="icon brands style2 fa-twitter"><span class="label">Twitter</span></a></li>
-									<li><a href="#" class="icon brands style2 fa-facebook-f"><span class="label">Facebook</span></a></li>
-									<li><a href="#" class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a></li>
-									<li><a href="#" class="icon brands style2 fa-dribbble"><span class="label">Dribbble</span></a></li>
-									<li><a href="#" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
-									<li><a href="#" class="icon brands style2 fa-500px"><span class="label">500px</span></a></li>
-									<li><a href="#" class="icon solid style2 fa-phone"><span class="label">Phone</span></a></li>
-									<li><a href="#" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
-								</ul>
-							</section>
-							<ul class="copyright">
-								<li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-							</ul>
-						</div>
-					</footer>
+        /* --- 3. PROJECTS SECTION --- */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 50px 20px;
+        }
 
-			</div>
+        h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            border-bottom: 2px solid #764ba2;
+            display: inline-block;
+        }
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
 
-	</body>
+        .project-card {
+            background: #2a2a2a;
+            border-radius: 15px;
+            padding: 25px;
+            transition: transform 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
 
+        .project-card:hover {
+            transform: scale(1.03); /* Zoom effect on hover */
+            background: #333;
+        }
+
+        .project-card h3 {
+            color: #a3bffa;
+            margin-top: 0;
+        }
+
+        .tag {
+            display: inline-block;
+            background: #764ba2;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.8rem;
+            margin-right: 5px;
+            margin-top: 10px;
+        }
+
+        /* --- 4. FOOTER --- */
+        footer {
+            text-align: center;
+            padding: 40px;
+            background: #111;
+            font-size: 0.9rem;
+            color: #888;
+        }
+
+        /* --- 5. ANIMATIONS --- */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 600px) {
+            .hero h1 { font-size: 2.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <section class="hero">
+        <h1>Hello, I'm Steja</h1>
+        <p>Data Analyst | Researcher | Developer</p>
+        <a href="#projects" class="btn">View My Work</a>
+    </section>
+
+    <div class="container" id="projects">
+        <div style="text-align: center;">
+            <h2>My Projects</h2>
+        </div>
+
+        <div class="project-grid">
+            
+            <div class="project-card">
+                <h3>Antimicrobial Resistance Analysis</h3>
+                <p>An in-depth statistical analysis of health literacy and AMR trends using R and Python. This project visualizes key correlations in public health data.</p>
+                <div class="tag">R Language</div>
+                <div class="tag">Statistics</div>
+                <br><br>
+                <a href="https://github.com/Steja715/repository-name-here" style="text-decoration: underline; color: #fff;">View Code &rarr;</a>
+            </div>
+
+            <div class="project-card">
+                <h3>Interactive Dashboard</h3>
+                <p>A dynamic dashboard built to track real-time data metrics. Features include responsive charts and downloadable reports.</p>
+                <div class="tag">Python</div>
+                <div class="tag">Data Viz</div>
+                <br><br>
+                <a href="#" style="text-decoration: underline; color: #fff;">View Code &rarr;</a>
+            </div>
+
+            <div class="project-card">
+                <h3>Machine Learning Model</h3>
+                <p>A predictive model designed to forecast trends based on historical datasets. Achieved 95% accuracy in testing.</p>
+                <div class="tag">ML</div>
+                <div class="tag">Scikit-Learn</div>
+                <br><br>
+                <a href="#" style="text-decoration: underline; color: #fff;">View Code &rarr;</a>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <p>Connect with me on <a href="https://github.com/Steja715" style="color: white;">GitHub</a></p>
+        <p>&copy; 2026 Steja. Hosted on GitHub Pages.</p>
+    </footer>
+
+</body>
 </html>

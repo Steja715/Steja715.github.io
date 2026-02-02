@@ -65,3 +65,157 @@
             transform: translateY(-2px);
             box-shadow: 0 6px 20px rgba(0,0,0,0.15);
         }
+
+        /* --- 3. SKILLS SECTION --- */
+        .skills-bar {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 25px;
+        }
+        
+        .skill-tag {
+            background: #ffffff;
+            padding: 8px 18px;
+            border-radius: 20px;
+            border: 1px solid #ddd;
+            font-size: 0.9rem;
+            color: #555;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        /* --- 4. PROJECTS SECTION --- */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 80px 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.2rem;
+            margin-bottom: 50px;
+            color: #2c3e50;
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: #2c3e50;
+            margin: 15px auto 0;
+            border-radius: 2px;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .project-card {
+            background: #ffffff;
+            border-radius: 15px;
+            padding: 30px;
+            border: 1px solid #eee;
+            /* Soft shadow for depth */
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            border-color: #ddd;
+        }
+
+        .project-card h3 {
+            color: #2c3e50;
+            margin-top: 0;
+            font-size: 1.5rem;
+        }
+
+        .project-card p {
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 25px;
+            line-height: 1.7;
+        }
+
+        .tech-stack {
+            margin-bottom: 25px;
+        }
+
+        .tech-stack span {
+            display: inline-block;
+            font-size: 0.75rem;
+            color: #2c3e50;
+            background: #f0f4f8; /* Very light blue/gray background */
+            padding: 5px 10px;
+            border-radius: 6px;
+            margin-right: 5px;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+
+        .card-link {
+            color: #2c3e50;
+            font-weight: 700;
+            border-bottom: 2px solid #2c3e50;
+            padding-bottom: 2px;
+            transition: color 0.3s, border-color 0.3s;
+        }
+
+        .card-link:hover { 
+            color: #3498db; 
+            border-color: #3498db;
+        }
+
+        /* --- 5. FOOTER --- */
+        footer {
+            text-align: center;
+            padding: 60px 20px;
+            background: #2c3e50; /* Dark footer to ground the light site */
+            color: white;
+            margin-top: 50px;
+        }
+        
+        .social-links a {
+            font-size: 1.8rem;
+            margin: 0 15px;
+            color: #ccc;
+            transition: color 0.3s;
+        }
+        
+        .social-links a:hover { color: #ffffff; }
+
+    </style>
+</head>
+<body>
+
+    <section class="hero">
+        <h1>Sai Teja Muramalla</h1>
+        <p class="subtitle">Master's in International Community Health | Data Analyst<br>Specializing in Biostatistics & Epidemiology</p>
+        
+        <div class="skills-bar">
+            <span class="skill-tag">R Programming</span>
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">Epidemiology</span>
+            <span class="skill-tag">Biostatistics</span>
+            <span class="skill-tag">SQL</span>
+            <span class="skill-tag">Tableau</span>
+        </div>
+
+        <a href="#projects" class="btn">View My Research</a>
+    </section>
+
+    <div class="container" id="projects">
+        <h2 class="section-title">Selected Projects</h2>
+
+        <div class="project-grid">
+            
+            <div class="project-card">
+                <h3>AMR & Health Literacy Analysis</h3>

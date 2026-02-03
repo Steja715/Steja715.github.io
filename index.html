@@ -14,17 +14,20 @@
             margin: 0;
             padding: 0;
             font-family: 'Poppins', sans-serif;
-            background-color: #f0f2f5; /* Soft gray-blue */
+            background-color: #f8f9fa;
             color: #333;
             line-height: 1.6;
+            /* Subtle dot pattern background */
+            background-image: radial-gradient(#e0e0e0 1px, transparent 1px);
+            background-size: 25px 25px;
         }
         a { text-decoration: none; transition: 0.3s; }
 
-        /* --- 1. ARTISTIC HERO SECTION --- */
+        /* --- 1. HERO SECTION (Artistic Gradient) --- */
         .hero {
             background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
             color: white;
-            padding: 100px 20px;
+            padding: 120px 20px 100px;
             text-align: center;
             clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
         }
@@ -32,7 +35,7 @@
         .hero h1 {
             font-family: 'Playfair Display', serif;
             font-size: 3.5rem;
-            margin: 0 0 10px 0;
+            margin: 0 0 15px 0;
             letter-spacing: 1px;
         }
 
@@ -47,41 +50,42 @@
         .social-icons a {
             color: white;
             font-size: 1.5rem;
-            margin: 0 10px;
+            margin: 0 15px;
             opacity: 0.8;
         }
-        .social-icons a:hover { opacity: 1; transform: scale(1.1); }
+        .social-icons a:hover { opacity: 1; transform: scale(1.1); color: #a3bffa; }
 
         /* --- 2. SKILLS (Floating Bar) --- */
         .skills-container {
             max-width: 900px;
-            margin: -50px auto 50px auto;
+            margin: -50px auto 60px auto;
             background: white;
-            padding: 20px;
+            padding: 25px;
             border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
             position: relative;
             z-index: 10;
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            gap: 10px;
+            gap: 12px;
         }
 
         .skill-tag {
-            background: #eef2f7;
+            background: #f0f4f8;
             color: #1e3c72;
-            padding: 8px 15px;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 600;
+            padding: 8px 18px;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            border: 1px solid #e1e4e8;
         }
 
-        /* --- 3. SECTIONS & GRIDS --- */
+        /* --- 3. MAIN CONTAINER --- */
         .container {
-            max-width: 1100px;
+            max-width: 1200px;
             margin: 0 auto;
-            padding: 0 20px 80px 20px;
+            padding: 0 20px 100px 20px;
         }
 
         .section-title {
@@ -89,61 +93,103 @@
             font-family: 'Playfair Display', serif;
             font-size: 2.5rem;
             color: #1e3c72;
-            margin-bottom: 40px;
-            margin-top: 20px;
+            margin-bottom: 50px;
+            margin-top: 80px;
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: ''; display: block; width: 60px; height: 3px; 
+            background: #e67e22; margin: 15px auto 0; border-radius: 2px;
         }
 
-        .project-grid {
+        /* --- 4. ABOUT SECTION --- */
+        .about-section {
+            background: white;
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.03);
+            text-align: center;
+            max-width: 850px;
+            margin: 0 auto 60px;
+            border: 1px solid #eee;
+        }
+
+        .btn-main {
+            display: inline-block;
+            background: #1e3c72;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-weight: 600;
+            margin-top: 25px;
+            box-shadow: 0 5px 15px rgba(30, 60, 114, 0.2);
+        }
+        .btn-main:hover { background: #2a5298; transform: translateY(-2px); }
+
+        /* --- 5. GRID LAYOUTS --- */
+        .grid-projects {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 30px;
         }
+        
+        .grid-certs {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
 
-        /* CARD DESIGN (Used for Projects AND Certifications) */
-        .project-card {
+        /* --- 6. CARDS (Unified Design) --- */
+        .card {
             background: white;
             border-radius: 12px;
             overflow: hidden;
-            border: none;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border: 1px solid #eee;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.03);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            height: 100%;
         }
 
-        .project-card:hover {
+        .card:hover {
             transform: translateY(-8px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+            border-color: #1e3c72;
         }
 
-        .card-content { padding: 25px; }
+        .card-content { padding: 30px; }
 
-        .project-card h3 {
+        .card h3 {
             margin-top: 0;
             color: #2c3e50;
             font-size: 1.4rem;
+            margin-bottom: 10px;
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .card h4 {
+            margin: 0 0 5px 0;
+            color: #2c3e50;
+            font-size: 1.15rem;
+            font-weight: 600;
         }
 
-        .project-card h4 {
-             margin-top: 0;
-             color: #2c3e50;
-             font-size: 1.2rem;
-             margin-bottom: 5px;
-        }
-
-        .project-card p {
+        .card p {
             font-size: 0.95rem;
             color: #666;
             margin-bottom: 20px;
         }
-
+        
+        /* Tech stack tags for projects */
         .tech-stack span {
             display: inline-block;
             font-size: 0.75rem;
             background: #f0f4f8;
             color: #555;
-            padding: 4px 8px;
+            padding: 4px 10px;
             border-radius: 4px;
             margin-right: 5px;
             margin-bottom: 5px;
@@ -163,15 +209,16 @@
         }
         .btn-link:hover { color: #e67e22; }
 
-        /* --- 4. DARK FOOTER --- */
+        /* --- 7. FOOTER --- */
         footer {
             background: #1a1a1a;
             color: #888;
             text-align: center;
-            padding: 40px 20px;
+            padding: 50px 20px;
             font-size: 0.9rem;
         }
-        footer a { color: #fff; text-decoration: underline; }
+        footer a { color: #fff; margin: 0 10px; }
+        footer i { font-size: 1.2rem; }
     </style>
 </head>
 <body>
@@ -179,180 +226,34 @@
     <header class="hero">
         <h1>Sai Teja Muramalla</h1>
         <p class="subtitle">Master's in International Community Health | Data Analyst<br>
-        Biostatistics & Epidemiology </p>
+        Biostatistics & Epidemiology</p>
         
         <div class="social-icons">
-            <a href="https://github.com/Steja715" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-            <a href="mailto:sai.teja986@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+            <a href="https://www.linkedin.com/in/sai-teja-muramalla-7673236b/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/Steja715" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="mailto:sai.teja986@gmail.com"><i class="fas fa-envelope"></i></a>
         </div>
     </header>
 
     <div class="skills-container">
-        <span class="skill-tag">R</span>
+        <span class="skill-tag">R Programming</span>
         <span class="skill-tag">Python</span>
         <span class="skill-tag">Epidemiology</span>
         <span class="skill-tag">Causal Inference</span>
         <span class="skill-tag">Survival Analysis</span>
-        <span class="skill-tag">Infection Disease Modelling</span>
-        <span class="skill-tag">Molecular Dynamics</span>
-        <span class="skill-tag">Pharmacovigilance</span>
+        <span class="skill-tag">Infectious Disease Modelling</span>
         <span class="skill-tag">SPSS</span>
         <span class="skill-tag">SQL</span>
-        <span class="skill-tag">Excel</span>
         <span class="skill-tag">Tableau</span>
+        <span class="skill-tag">Biostatistics</span>
     </div>
-
-     <div style="background: white; padding: 40px; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); margin-bottom: 60px; text-align: center;">
-            <h2 style="font-family: 'Playfair Display', serif; color: #1e3c72; margin-top: 0;">About Me</h2>
-            <p style="font-size: 1.1rem; color: #555; max-width: 800px; margin: 0 auto; line-height: 1.8;">
-                I am a researcher and aspiring Biostatistician with a Master’s in <strong>International Community Health</strong> from the University of Oslo and a background in <strong>Biotechnology and Bioinformatics</strong>. 
-                <br><br>
-                My work focuses on bridging the gap between public health data and actionable insights. I specialize in <strong>Epidemiology, Quantitative study designs, Advance statistical methods like causal inference and survival analysis , and Infectious Disease Modeling</strong>, Proficient in utilizing analytics tools like <strong>R, Python, SPSS to analyze complex health datasets</strong> and data management tools like SQL, Advance Excel and visualisation tools like Power BI and Tableau. I am currently preparing a manuscript on Antimicrobial Resistance (AMR) on a project based on masters thesis. Currently seeking PhD opportunities in the field of Biostatistics to develop data driven intervention strategies for public health challenges. 
-            </p>
 
     <div class="container">
         
-        <h2 class="section-title">Research & Projects</h2>
-        
-        <div class="project-grid">
-
-            <div class="project-card">
-                <div class="card-content">
-                    <h3>AMR & Health Literacy</h3>
-                    <p><strong>Master's Project:</strong> Investigated community health literacy and antimicrobial resistance (AMR) awareness in Baddi, India. Analyzed primary field data from 450 participants.</p>
-                    <div class="tech-stack">
-                        <span>R</span><span>Descriptive Statistics</span><span>Multivariate Regression Models</span><span>Chi-Square Tests</span><span>Survey Design</span><span>SPSS</span><span>WHO classification</span>
-                    </div>
-                </div>
-                <div class="card-footer">
-                   <a href="project-amr.html" class="btn-link">View Details <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div class="card-content">
-                    <h3>Breast Cancer Survival Analysis</h3>
-                    <p>Independent project conducting time-to-event analysis on clinical datasets. Used Kaplan-Meier estimators and Cox Proportional Hazards models to estimate survival probabilities.</p>
-                    <div class="tech-stack">
-                        <span>R</span><span>Survival Analysis</span><span>Cox Models</span><span>Kaplan Meier</span><span>Visualisation</span>
-                    </div>
-                </div>
-                <div class="card-footer">
-                    <a href="#" class="btn-link">View Details <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div class="card-content">
-                    <h3>Tanzania DHS Data Analysis</h3>
-                    <p>Secondary analysis of Demographic and Health Survey (DHS) data. Examined public health trends using complex survey design weighting and clustering.</p>
-                    <div class="tech-stack">
-                        <span>R</span><span>Descriptive Statistics</span><span>Public Health</span><span>Data Cleaning</span>
-                    </div>
-                </div>
-                <div class="card-footer">
-                    <a href="#" class="btn-link">View Details <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div class="card-content">
-                    <h3>Phytosynthesis of Silver Nanoparticles</h3>
-                    <p><strong>Bachelor's Project:</strong> Synthesized nanoparticles using Acacia Catechu extract. Characterized structure using UV-spectroscopy, FTIR, and SEM.</p>
-                    <div class="tech-stack">
-                        <span>Biotechnology</span><span>Molecular Docking</span><span>Schrodinger Suite</span>
-                    </div>
-                </div>
-                <div class="card-footer">
-                    <a href="#" class="btn-link">View Details <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </div>
-        
-       </div> <h2 class="section-title" style="margin-top: 80px;">Certifications & Coursework</h2>
-        
-        <div class="project-grid">
-            
-            <div class="project-card">
-                <div class="card-content">
-                    <h4>Epidemiology for Public Health</h4>
-                    <p>Coursera / Imperial College London</p>
-                </div>
-                <div class="card-footer">
-                    <a href="https://coursera.org/share/1ee4d31e5c14ef764a40045b9995d4fd" class="btn-link">View Credential <i class="fas fa-external-link-alt"></i></a>
-                </div>
-            </div>
-
-               <div class="project-card">
-                <div class="card-content">
-                    <h4>Statistical Analysis with R</h4>
-                    <p>Coursera / Imperial College London</p>
-                </div>
-                <div class="card-footer">
-                    <a href="#" class="btn-link">View Credential <i class="fas fa-external-link-alt"></i></a>
-                </div>
-            <div class="metric-card">
-                <span class="metric-number">57%</span>
-                <span class="metric-label">Misuse Rate</span>
-            </div>
-        </div>
-
-        <div class="full-card-section">
-            <h2>Education Drives Awareness</h2>
-            <p>
-                One of the most critical findings of the study was the clear linear trend between <strong>Education Level</strong> and AMR Awareness scores.
+        <div class="about-section">
+            <h2 style="font-family: 'Playfair Display', serif; color: #1e3c72; margin-top: 0;">About Me</h2>
+            <p style="font-size: 1.1rem; color: #555; line-height: 1.8;">
+                I am a researcher and aspiring Biostatistician with a Master’s in <strong>International Community Health</strong> from the University of Oslo and a background in <strong>Biotechnology and Bioinformatics</strong>. 
+                <br><br>
+                My work focuses on bridging the gap between public health data and actionable insights. I specialize in <strong>Epidemiology, Quantitative study designs, and advanced statistical methods</strong> like causal inference and survival analysis. I am proficient in utilizing analytics tools like <strong>R, Python, and SPSS</strong> to analyze complex health datasets. I am currently preparing a manuscript on Antimicrobial Resistance (AMR) and seeking PhD opportunities to develop data-driven intervention strategies.
             </p>
-            <p>
-                As illustrated in the box plots below, participants with graduate and postgraduate degrees scored significantly higher medians compared to those with no formal education. This trend confirms that lack of formal schooling is a primary barrier to understanding antibiotic risks.
-            </p>
-
-            <div class="project-card">
-                <div class="card-content">
-                    <h4>Infectious Disease Modeling</h4>
-                    <p>Coursera / Imperial College London</p>
-                </div>
-                <div class="card-footer">
-                    <a href="#" class="btn-link">View Credential <i class="fas fa-external-link-alt"></i></a>
-                </div>
-                
-            </div>
-                 <div class="project-card">
-                <div class="card-content">
-                    <h4>Crash course in Causality: Inferring Causal Effects from Observational Data</h4>
-                    <p>Courser / University of Pennsylvania</p>
-                </div>
-                <div class="card-footer">
-                    <a href="#" class="btn-link">View Credential <i class="fas fa-external-link-alt"></i></a>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div class="card-content">
-                    <h4>GIS for Public Health</h4>
-                    <p>Udemy</p>
-                </div>
-                <div class="card-footer">
-                    <a href="https://www.udemy.com/certificate/UC-f2df7e8b-d16d-4ea0-b6c1-1d09a0a1177f/" class="btn-link">View Credential <i class="fas fa-external-link-alt"></i></a>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div class="card-content">
-                    <h4>Data Analysis (Currently Ongoing)</h4>
-                    <p>Career247 / IBM</p>
-                </div>
-                <div class="card-footer">
-                    <a href="#" class="btn-link">View Credential <i class="fas fa-external-link-alt"></i></a>
-                </div>
-            </div>
-
-        </div> </div> <footer>
-        <div style="margin-bottom: 20px;">
-            <a href="https://www.linkedin.com/in/sai-teja-muramalla-7673236b/" target="_blank" style="margin: 0 10px; font-size: 1.2rem; color: #a3bffa;">LinkedIn</a>
-            <a href="https://github.com/Steja715" target="_blank" style="margin: 0 10px; font-size: 1.2rem; color: #a3bffa;">GitHub</a>
-            <a href="mailto:sai.teja986@gmail.com" style="margin: 0 10px; font-size: 1.2rem; color: #a3bffa;">Email Me</a>
-               </div>
-        <p>&copy;Sai Teja Muramalla</p>
-    </footer>
-
-</body>
-</html>

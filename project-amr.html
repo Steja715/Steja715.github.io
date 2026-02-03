@@ -33,13 +33,29 @@
             padding: 120px 20px 100px;
             text-align: center;
             clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+            position: relative; /* Ensure it stays in flow */
         }
         
         .project-header h1 { color: white; font-size: 3.5rem; margin-bottom: 10px; }
         .project-meta { font-size: 1.2rem; opacity: 0.9; max-width: 700px; margin: 0 auto 30px; font-weight: 300; }
         
-        .back-nav { position: absolute; top: 30px; left: 30px; }
-        .back-nav a { color: white; text-decoration: none; font-weight: 600; border: 1px solid rgba(255,255,255,0.3); padding: 8px 20px; border-radius: 30px; transition: 0.3s; }
+        /* UPDATED BACK BUTTON STYLES */
+        .back-nav { 
+            position: absolute; 
+            top: 30px; 
+            left: 30px; 
+            z-index: 1000; /* FORCE IT ON TOP OF EVERYTHING */
+        }
+        .back-nav a { 
+            color: white; 
+            text-decoration: none; 
+            font-weight: 600; 
+            border: 1px solid rgba(255,255,255,0.3); 
+            padding: 8px 20px; 
+            border-radius: 30px; 
+            transition: 0.3s; 
+            background: rgba(0,0,0,0.2); /* Slight background for readability */
+        }
         .back-nav a:hover { background: white; color: #1e3c72; }
 
         .tech-tag { display: inline-block; background: rgba(255,255,255,0.15); backdrop-filter: blur(5px); color: white; padding: 6px 15px; border-radius: 20px; font-size: 0.85rem; margin: 5px; border: 1px solid rgba(255,255,255,0.2); }
@@ -60,7 +76,7 @@
         .metric-number { font-size: 2.5rem; font-weight: 700; color: #1e3c72; display: block; }
         .metric-label { font-size: 0.9rem; color: #666; letter-spacing: 1px; text-transform: uppercase; margin-top: 5px; }
 
-        /* --- 5. FULL WIDTH CARD SECTIONS (For Big Charts) --- */
+        /* --- 5. FULL WIDTH CARD SECTIONS --- */
         .full-card-section {
             background: white;
             padding: 50px;
@@ -77,7 +93,7 @@
             border: 1px solid #eee;
         }
 
-        /* --- 6. ZIG-ZAG SECTIONS (For Simple Charts) --- */
+        /* --- 6. ZIG-ZAG SECTIONS --- */
         .section-row { 
             display: flex; align-items: center; gap: 50px; margin-bottom: 100px; 
         }
@@ -151,83 +167,4 @@
                 One of the most critical findings of the study was the clear linear trend between <strong>Education Level</strong> and AMR Awareness scores.
             </p>
             <p>
-                As illustrated in the box plots below, participants with graduate and postgraduate degrees scored significantly higher medians compared to those with no formal education. This trend confirms that lack of formal schooling is a primary barrier to understanding antibiotic risks.
-            </p>
-            
-            <img src="amr-boxplots.png" alt="Box Plot Analysis" class="full-width-img">
-            <p class="caption">Figure 1: Box plots demonstrating the significant upward trend in AMR knowledge scores as Education level increases (Left), compared with Occupation groups (Right).</p>
-        </div>
-
-        <div class="full-card-section">
-            <h2>The "Critical Appraisal" Gap</h2>
-            <p>
-                Using the <strong>Ophelia HLQ Framework</strong>, we dissected which specific skills predict better antibiotic usage. The analysis revealed that general "Social Support" or "Engagement" had little impact. 
-            </p>
-            <p>
-                Instead, the strongest predictor was <strong>Critical Appraisal (Domain 5)</strong>—the ability to question and verify health information. This insight shifts the focus of future interventions: we don't just need to "spread awareness"; we need to teach people <em>how to evaluate</em> the information they receive.
-            </p>
-
-            <img src="hlq-correlations.png" alt="HLQ Correlations" class="full-width-img">
-            <p class="caption">Figure 2: Correlation magnitude of 9 Health Literacy domains. 'Appraisal of Health Information' (Red bar) is the strongest predictor of AMR awareness.</p>
-        </div>
-
-        <div class="full-card-section">
-            <h2>Isolating Predictors: The Forest Plot</h2>
-            <p>
-                To control for confounding variables, we fitted a multiple linear regression model. The Forest Plot below visualizes the standardized coefficients (Beta) for each predictor.
-            </p>
-            <p>
-                <strong>Key Insight:</strong> Notice how <strong>Education</strong> and <strong>HLQ Domains 2, 5, 8, and 9</strong> sit clearly to the right of the zero line, indicating they are statistically significant positive predictors. In contrast, factors like Age and Gender cross the line, confirming they have no significant impact on AMR knowledge in this context.
-            </p>
-
-            <img src="forest-plot.png" alt="Regression Forest Plot" class="full-width-img">
-            <p class="caption">Figure 3: Forest plot displaying the coefficients of predictors for AMR Awareness. Education and Appraisal skills remain significant even after adjusting for other factors.</p>
-        </div>
-
-        <div class="section-row">
-            <div class="text-col">
-                <h2>The Supply Side: Pharmacist Behavior</h2>
-                <p>
-                    While the community demands antibiotics due to misconceptions, pharmacists fuel this fire by supplying them without restriction. 
-                    Our audit of 239 pharmacies revealed a dangerous reliance on high-strength drugs.
-                </p>
-                <p>
-                    <strong>The "Watch" Category Crisis:</strong> The WHO classifies antibiotics into Access, Watch, and Reserve. In Baddi, <strong>65.2%</strong> of all dispensed antibiotics belonged to the high-risk "Watch" category (Red), far exceeding the safer "Access" group.
-                </p>
-            </div>
-            <div class="img-col">
-                <img src="aware-donut.png" alt="AWaRe Donut Chart" class="side-img" style="max-width: 450px;">
-                <p class="caption" style="text-align: center;">Figure 4: 65.2% of all dispensed antibiotics were "Watch" category.</p>
-            </div>
-        </div>
-
-        <div class="full-card-section">
-            <h2>Misuse Across All Ages & Illnesses</h2>
-            <p>
-                The pattern of misuse was not random—it was systematic. 
-                <strong>Diarrhoea (Left Chart)</strong> was the most mismanaged condition, with pharmacists recommending Watch category antibiotics in <strong>76.1%</strong> of cases, disregarding guidelines for ORS and Zinc.
-            </p>
-            
-            <img src="aware-stacked.png" alt="Stacked Bar Charts" class="full-width-img">
-            <p class="caption">Figure 5: Stacked bar charts showing the dominance of Watch antibiotics (Orange) across all Illness types and Age groups.</p>
-        </div>
-
-        <div style="background: #eef2f7; padding: 60px; border-radius: 20px; text-align: center;">
-            <h2 style="margin-top: 0;">Conclusion</h2>
-            <p style="max-width: 800px; margin: 0 auto 20px;">
-                This study highlights a reinforcing cycle: <strong>Low Education</strong> limits the community's ability to appraise risks, driving demand for quick fixes. 
-                <strong>Pharmacists</strong> meet this demand with powerful, inappropriate antibiotics to retain customers.
-            </p>
-            <p style="font-weight: 600; color: #1e3c72; font-size: 1.1rem;">
-                Effective policy must target both sides: Educational interventions to improve "Critical Appraisal" skills, and stricter regulatory enforcement on pharmacy dispensing.
-            </p>
-        </div>
-
-    </div>
-
-    <footer>
-        &copy; 2026 Sai Teja Muramalla. Built for Research Portfolio.
-    </footer>
-
-</body>
-</html>
+                As illustrated in the box plots below

@@ -15,53 +15,66 @@
         .project-header {
             background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
             color: white;
-            padding: 80px 20px;
+            padding: 100px 20px;
             text-align: center;
         }
-        .project-header h1 { font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 10px; }
+        .project-header h1 { font-family: 'Playfair Display', serif; font-size: 2.8rem; margin-bottom: 15px; }
         .project-meta { font-size: 1.1rem; opacity: 0.9; max-width: 800px; margin: 0 auto; }
+        
+        /* TAGS */
+        .tech-tag { display: inline-block; background: rgba(255,255,255,0.2); color: white; padding: 6px 15px; border-radius: 20px; font-size: 0.85rem; font-weight: 500; margin: 5px; backdrop-filter: blur(5px); }
+
         .back-link { display: inline-block; margin-top: 30px; color: white; border: 1px solid rgba(255,255,255,0.5); padding: 8px 25px; border-radius: 30px; text-decoration: none; transition: 0.3s; }
         .back-link:hover { background: white; color: #1e3c72; }
 
         /* MAIN CONTENT */
         .content-container {
             max-width: 1000px;
-            margin: -50px auto 50px auto;
+            margin: -60px auto 50px auto;
             background: white;
-            padding: 50px;
+            padding: 60px;
             border-radius: 12px;
             box-shadow: 0 10px 40px rgba(0,0,0,0.08);
             position: relative;
         }
 
-        h2 { color: #1e3c72; border-bottom: 2px solid #eee; padding-bottom: 10px; margin-top: 50px; font-family: 'Playfair Display', serif; }
-        h3 { color: #444; margin-top: 30px; font-weight: 600; }
+        h2 { color: #1e3c72; border-bottom: 2px solid #f0f0f0; padding-bottom: 10px; margin-top: 60px; font-family: 'Playfair Display', serif; font-size: 2rem; }
+        h3 { color: #444; margin-top: 30px; font-weight: 600; font-size: 1.3rem; }
         
         /* METRICS GRID */
-        .metrics-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin: 30px 0; }
-        .metric-card { background: #f0f4f8; padding: 20px; border-radius: 8px; text-align: center; border-left: 4px solid #1e3c72; }
-        .metric-number { font-size: 2rem; font-weight: 700; color: #1e3c72; display: block; }
-        .metric-label { font-size: 0.9rem; color: #666; }
+        .metrics-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin: 40px 0; }
+        .metric-card { background: #f8f9fa; padding: 25px; border-radius: 12px; text-align: center; border-bottom: 4px solid #1e3c72; transition: transform 0.3s; }
+        .metric-card:hover { transform: translateY(-5px); }
+        .metric-number { font-size: 2.2rem; font-weight: 700; color: #1e3c72; display: block; margin-bottom: 5px; }
+        .metric-label { font-size: 0.9rem; color: #666; text-transform: uppercase; letter-spacing: 1px; }
 
         /* IMAGE STYLES */
-        .project-img { width: 100%; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); margin: 30px 0; border: 1px solid #eee; }
+        .project-img { width: 100%; border-radius: 8px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); margin: 30px 0; border: 1px solid #eee; }
         .caption { text-align: center; font-size: 0.9rem; color: #777; margin-top: -20px; margin-bottom: 40px; font-style: italic; }
 
-        /* TAGS */
-        .tech-tag { display: inline-block; background: #eef2f7; color: #1e3c72; padding: 6px 15px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; margin-right: 8px; margin-bottom: 10px; }
+        /* RESEARCH QUESTION BOX */
+        .rq-box { background: #eef2f7; padding: 25px; border-left: 5px solid #1e3c72; margin-bottom: 20px; border-radius: 0 8px 8px 0; }
+        .rq-box h4 { margin: 0 0 10px 0; color: #1e3c72; }
+        .rq-box p { margin: 0; font-style: italic; color: #555; }
+
+        /* OPHELIA GRID */
+        .ophelia-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; margin-top: 20px; }
+        .ophelia-item { background: #fff; border: 1px solid #eee; padding: 15px; border-radius: 8px; display: flex; align-items: center; gap: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.03); }
+        .ophelia-num { background: #1e3c72; color: white; width: 25px; height: 25px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.8rem; font-weight: bold; flex-shrink: 0; }
+        .ophelia-text { font-size: 0.9rem; color: #444; }
 
     </style>
 </head>
 <body>
 
     <header class="project-header">
-        <h1>Understanding Community Health Literacy & AMR Awareness</h1>
-        <p class="project-meta">A Two-Part Study on Public Knowledge and Pharmacist Prescribing Behaviours in Baddi, Himachal Pradesh</p>
+        <h1>AMR & Community Health Literacy</h1>
+        <p class="project-meta">A Mixed-Methods Study on Antibiotic Awareness and Pharmacy Dispensing in Baddi, India</p>
         <div style="margin-top: 20px;">
             <span class="tech-tag">R Studio</span>
             <span class="tech-tag">SPSS</span>
             <span class="tech-tag">Ophelia Framework</span>
-            <span class="tech-tag">Multivariate Regression</span>
+            <span class="tech-tag">Regression Modeling</span>
         </div>
         <br>
         <a href="index.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Portfolio</a>
@@ -69,67 +82,98 @@
 
     <div class="content-container">
 
-        <h2>Project Background</h2>
+        <h2>Project Overview</h2>
         <p>
-            Antimicrobial Resistance (AMR) is currently killing more people than malaria or HIV. [cite_start]Misuse of "miracle drugs" is accelerating this burden[cite: 4661]. 
-            [cite_start]This study focuses on <strong>Baddi, Himachal Pradesh</strong>, one of Asia's biggest pharmaceutical hubs with over 2,000 factories[cite: 4670].
+            Antimicrobial Resistance (AMR) is a global crisis, often accelerated by misuse in Low- and Middle-Income Countries. 
+            [cite_start]This study focused on <strong>Baddi, Himachal Pradesh</strong>, one of Asia's largest pharmaceutical hubs[cite: 2307]. [cite_start]Despite being a production center, the region faces significant public health challenges including open drainage and high antibiotic residue in local rivers[cite: 2309, 2311].
         </p>
         <p>
-            [cite_start]Despite being a pharma hub, the region faces challenges like poor hygiene, open drainage, and high antibiotic residue in the Sirsa river[cite: 4672, 4674]. This project investigates the link between <strong>Health Literacy</strong> (demand side) and <strong>Pharmacist Dispensing</strong> (supply side).
+            [cite_start]The study investigates the disconnect between <strong>Demand</strong> (Community Knowledge) and <strong>Supply</strong> (Pharmacist Dispensing)[cite: 14].
         </p>
 
         <div class="metrics-grid">
             <div class="metric-card">
                 <span class="metric-number">450</span>
-                <span class="metric-label">Community Participants</span>
+                <span class="metric-label">Community Surveyed</span>
             </div>
             <div class="metric-card">
                 <span class="metric-number">239</span>
-                <span class="metric-label">Pharmacists Surveyed</span>
+                <span class="metric-label">Pharmacists Audited</span>
             </div>
             <div class="metric-card">
                 <span class="metric-number">56.9%</span>
-                [cite_start]<span class="metric-label">Self-Medication / Misuse [cite: 4701]</span>
+                <span class="metric-label">Misuse Rate</span>
             </div>
             <div class="metric-card">
-                <span class="metric-number">72.8%</span>
-                <span class="metric-label">Dispensed w/o Prescription</span>
+                <span class="metric-number">65.2%</span>
+                <span class="metric-label">"Watch" Drugs Given</span>
             </div>
         </div>
 
-        <h2>Part 1: Community Survey Results</h2>
-        <p>
-            [cite_start]We utilized the <strong>Ophelia HLQ (Health Literacy Questionnaire)</strong> to assess 9 distinct domains of health literacy[cite: 4686].
-            The sample was diverse, covering various education levels and occupations.
-        </p>
-
-        <h3>Demographics Breakdown</h3>
-        <p>
-            [cite_start]The study found a clear trend: Education was the strongest predictor of AMR awareness (19.2% variance), while Occupation contributed 9.5% variance[cite: 4708, 4709].
-        </p>
+        <h2>Research Objectives</h2>
+        [cite_start]<p>The study was guided by four primary research questions to bridge the gap between social determinants and clinical outcomes [cite: 105-108]:</p>
         
-        <img src="ppt-demographics.png" alt="Education and Occupation Demographics" class="project-img">
-        <p class="caption">Figure 1: Distribution of Education Levels and Occupation among 450 participants.</p>
+        <div class="rq-box">
+            <h4>RQ 1: Health Literacy Levels</h4>
+            <p>What are the levels of health literacy among community members in Baddi, and how do these influence awareness regarding antibiotic use?</p>
+        </div>
+        <div class="rq-box">
+            <h4>RQ 2: Socio-Demographic Drivers</h4>
+            <p>Which factors (age, gender, education, occupation) are most strongly associated with AMR awareness?</p>
+        </div>
+        <div class="rq-box">
+            <h4>RQ 3: Pharmacist Behavior</h4>
+            <p>How do pharmacists dispense antibiotics for common illnesses, and how does this align with WHO AWaRe classifications?</p>
+        </div>
+        <div class="rq-box">
+            <h4>RQ 4: The Interaction</h4>
+            <p>How do community demand and supply-side practices together shape the dynamics of antibiotic misuse?</p>
+        </div>
 
-        <h3>Source of Medicine</h3>
+        <h2>Methodology: The Ophelia Framework</h2>
         <p>
-            A critical finding was the source of antibiotics. [cite_start]<strong>56.9%</strong> of respondents rely on pharmacists or self-medication rather than a doctor's prescription, indicating a high level of misuse[cite: 4701].
+            [cite_start]We utilized the <strong>Ophelia (Optimising Health Literacy and Access)</strong> Health Literacy Questionnaire (HLQ)[cite: 171]. 
+            Unlike simple knowledge tests, this tool assesses 9 distinct dimensions of how people process health information:
         </p>
 
-        <img src="ppt-source.png" alt="Community Source of Medicine" class="project-img">
-        <p class="caption">Figure 2: Majority of the community relies on pharmacists or self-medication (green bars).</p>
+        <div class="ophelia-grid">
+            <div class="ophelia-item"><span class="ophelia-num">1</span> <span class="ophelia-text">Feeling understood & supported by healthcare providers</span></div>
+            <div class="ophelia-item"><span class="ophelia-num">2</span> <span class="ophelia-text">Having sufficient info to manage health</span></div>
+            <div class="ophelia-item"><span class="ophelia-num">3</span> <span class="ophelia-text">Actively managing own health</span></div>
+            <div class="ophelia-item"><span class="ophelia-num">4</span> <span class="ophelia-text">Social support for health</span></div>
+            <div class="ophelia-item"><span class="ophelia-num">5</span> <span class="ophelia-text">Appraisal of health information (Critical Thinking)</span></div>
+            <div class="ophelia-item"><span class="ophelia-num">6</span> <span class="ophelia-text">Ability to actively engage with providers</span></div>
+            <div class="ophelia-item"><span class="ophelia-num">7</span> <span class="ophelia-text">Navigating the healthcare system</span></div>
+            <div class="ophelia-item"><span class="ophelia-num">8</span> <span class="ophelia-text">Ability to find good health information</span></div>
+            <div class="ophelia-item"><span class="ophelia-num">9</span> <span class="ophelia-text">Understanding health info well enough to act</span></div>
+        </div>
 
-        <h2>Part 2: Pharmacist Prescribing Behaviors</h2>
+        <h2>Part 1: Community Results</h2>
+        
+        <h3>Demographics & Predictors</h3>
         <p>
-            Using a simulated patient approach, we approached 239 pharmacists with symptoms of fever, diarrhea, or respiratory infection.
-            [cite_start]The results revealed a dangerous dominance of <strong>"Watch" category drugs</strong> (broad-spectrum antibiotics carrying higher resistance risk)[cite: 4713].
+            [cite_start]The analysis revealed that <strong>Education</strong> was the single strongest predictor of AMR awareness (R² = 0.192), while Occupation contributed 9.5% variance[cite: 471, 472].
+        </p>
+        <img src="ppt-demographics.png" alt="Demographics Chart" class="project-img">
+        <p class="caption">Figure 1: Distribution of Education and Occupation in the study sample.</p>
+
+        <h3>Sources of Medicine</h3>
+        <p>
+            [cite_start]A concerning <strong>56.9%</strong> of respondents reported relying on pharmacists or self-medication rather than visiting a doctor[cite: 341]. This indicates a high prevalence of informal healthcare seeking.
+        </p>
+        <img src="ppt-source.png" alt="Source of Medicine Chart" class="project-img">
+        <p class="caption">Figure 2: The majority of the community bypasses doctors for antibiotics.</p>
+
+        <h2>Part 2: Pharmacist Prescribing</h2>
+        <p>
+            Using a simulated patient approach (Mystery Shopper), we audited 239 pharmacies. 
+            [cite_start]The results showed a dangerous over-reliance on <strong>"Watch" category</strong> antibiotics (broad-spectrum drugs with higher resistance potential)[cite: 1153].
         </p>
 
-        <h3>Key Findings:</h3>
-        <ul>
-            [cite_start]<li><strong>Fluoroquinolones Dominance:</strong> Ofloxacin and Norfloxacin comprised <strong>36.9%</strong> of all antibiotic recommendations[cite: 4714].</li>
-            [cite_start]<li><strong>Diarrheal Cases:</strong> 76.1% of prescriptions for diarrhea were broad-spectrum "Watch" antibiotics, ignoring standard guidelines[cite: 4717].</li>
-            [cite_start]<li><strong>Pediatric Risk:</strong> Even for infants (0-5 years), Watch category drugs accounted for 59.1% of recommendations[cite: 4721].</li>
+        <ul style="margin-bottom: 30px; margin-top: 20px;">
+            [cite_start]<li><strong>72.8%</strong> of antibiotics were dispensed without a valid prescription[cite: 1195].</li>
+            [cite_start]<li><strong>Diarrheal Cases:</strong> 76.1% of prescriptions were for broad-spectrum antibiotics like Ofloxacin, ignoring guidelines for ORS/Zinc[cite: 1179].</li>
+            [cite_start]<li><strong>Pediatric Risk:</strong> Even for infants (0-5 years), Watch category drugs accounted for 59.1% of recommendations[cite: 1188].</li>
         </ul>
 
         <img src="ppt-aware.png" alt="AWaRe Classification Analysis" class="project-img">
@@ -137,13 +181,15 @@
 
         <h2>Conclusion & Impact</h2>
         <p>
-            The study highlights that AMR is not just a biological issue but a social one. 
-            Low health literacy in the community drives demand for quick fixes, and pharmacists fulfill this demand with strong, inappropriate antibiotics.
-            Effective interventions must target <strong>educational appraisal skills</strong> and enforce stricter dispensing regulations in pharmaceutical hubs like Baddi.
+            This study demonstrates that AMR is not just a biological challenge but a social one. 
+            Low health literacy—specifically the inability to <strong>appraise information (Domain 5)</strong>—drives demand for quick fixes. Pharmacists meet this demand with powerful, inappropriate antibiotics to retain customers.
+        </p>
+        <p>
+            [cite_start]<strong>Key Recommendation:</strong> Interventions must move beyond general awareness to target specific <em>appraisal skills</em> and enforce strict dispensing regulations in industrial hubs[cite: 1316, 1317].
         </p>
 
-        <div style="text-align: center; margin-top: 50px;">
-            <a href="INTHE4012 masters thesis candidate 118.pdf" target="_blank" class="back-link" style="background: #1e3c72; color: white;">
+        <div style="text-align: center; margin-top: 60px;">
+            <a href="INTHE4012 masters thesis candidate 118.pdf" target="_blank" class="back-link" style="background: #1e3c72; color: white; border: none; padding: 12px 30px;">
                 <i class="fas fa-file-pdf"></i> Read Full Thesis
             </a>
         </div>

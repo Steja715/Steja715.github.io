@@ -56,11 +56,10 @@
 
     <header class="project-header">
         <h1>Understanding Community Health Literacy & AMR Awareness</h1>
-        <p class="project-meta">A Two-Part Mixed-Methods Study in Baddi, India (Pharmaceutical Hub)</p>
+        <p class="project-meta">A Two-Part Study on Public Knowledge and Pharmacist Prescribing Behaviours in Baddi, Himachal Pradesh</p>
         <div style="margin-top: 20px;">
             <span class="tech-tag">R Studio</span>
             <span class="tech-tag">SPSS</span>
-            <span class="tech-tag">Python (Pandas/Seaborn)</span>
             <span class="tech-tag">Ophelia Framework</span>
             <span class="tech-tag">Multivariate Regression</span>
         </div>
@@ -70,13 +69,13 @@
 
     <div class="content-container">
 
-        <h2>Project Overview</h2>
+        <h2>Project Background</h2>
         <p>
-            Antimicrobial resistance (AMR) is a growing global health threat, particularly in Low- and Middle-Income Countries (LMICs). 
-            This study addresses the critical gap in AMR awareness by examining it through the lens of <strong>Health Literacy</strong> in Baddi, Himachal Pradesh—a major pharmaceutical industrial hub.
+            Antimicrobial Resistance (AMR) is currently killing more people than malaria or HIV. [cite_start]Misuse of "miracle drugs" is accelerating this burden[cite: 4661]. 
+            [cite_start]This study focuses on <strong>Baddi, Himachal Pradesh</strong>, one of Asia's biggest pharmaceutical hubs with over 2,000 factories[cite: 4670].
         </p>
         <p>
-            The research explores both the <strong>Demand Side</strong> (community knowledge and behavior) and the <strong>Supply Side</strong> (pharmacist dispensing practices) to understand the drivers of antibiotic misuse.
+            [cite_start]Despite being a pharma hub, the region faces challenges like poor hygiene, open drainage, and high antibiotic residue in the Sirsa river[cite: 4672, 4674]. This project investigates the link between <strong>Health Literacy</strong> (demand side) and <strong>Pharmacist Dispensing</strong> (supply side).
         </p>
 
         <div class="metrics-grid">
@@ -89,114 +88,58 @@
                 <span class="metric-label">Pharmacists Surveyed</span>
             </div>
             <div class="metric-card">
+                <span class="metric-number">56.9%</span>
+                [cite_start]<span class="metric-label">Self-Medication / Misuse [cite: 4701]</span>
+            </div>
+            <div class="metric-card">
                 <span class="metric-number">72.8%</span>
                 <span class="metric-label">Dispensed w/o Prescription</span>
             </div>
-            <div class="metric-card">
-                <span class="metric-number">65.2%</span>
-                <span class="metric-label">"Watch" Category Drugs</span>
-            </div>
         </div>
 
-        <h2>Part 1: Community Health Literacy (Demand Side)</h2>
+        <h2>Part 1: Community Survey Results</h2>
         <p>
-            We surveyed 450 residents using the <strong>Health Literacy Questionnaire (HLQ)</strong> and a custom AMR knowledge index. 
-            The study found that education was the strongest predictor of AMR knowledge (R² = 0.192), explaining 19% of the variance alone.
+            [cite_start]We utilized the <strong>Ophelia HLQ (Health Literacy Questionnaire)</strong> to assess 9 distinct domains of health literacy[cite: 4686].
+            The sample was diverse, covering various education levels and occupations.
+        </p>
+
+        <h3>Demographics Breakdown</h3>
+        <p>
+            [cite_start]The study found a clear trend: Education was the strongest predictor of AMR awareness (19.2% variance), while Occupation contributed 9.5% variance[cite: 4708, 4709].
         </p>
         
+        <img src="ppt-demographics.png" alt="Education and Occupation Demographics" class="project-img">
+        <p class="caption">Figure 1: Distribution of Education Levels and Occupation among 450 participants.</p>
+
+        <h3>Source of Medicine</h3>
+        <p>
+            A critical finding was the source of antibiotics. [cite_start]<strong>56.9%</strong> of respondents rely on pharmacists or self-medication rather than a doctor's prescription, indicating a high level of misuse[cite: 4701].
+        </p>
+
+        <img src="ppt-source.png" alt="Community Source of Medicine" class="project-img">
+        <p class="caption">Figure 2: Majority of the community relies on pharmacists or self-medication (green bars).</p>
+
+        <h2>Part 2: Pharmacist Prescribing Behaviors</h2>
+        <p>
+            Using a simulated patient approach, we approached 239 pharmacists with symptoms of fever, diarrhea, or respiratory infection.
+            [cite_start]The results revealed a dangerous dominance of <strong>"Watch" category drugs</strong> (broad-spectrum antibiotics carrying higher resistance risk)[cite: 4713].
+        </p>
+
         <h3>Key Findings:</h3>
         <ul>
-            <li><strong>Misconceptions:</strong> ~50% of participants believed antibiotics could treat viral infections like colds and flu.</li>
-            <li><strong>Predictors:</strong> HLQ domains related to "Critical Appraisal" (Domain 5) and "Finding Good Information" (Domain 8) were strongly correlated with better AMR knowledge.</li>
+            [cite_start]<li><strong>Fluoroquinolones Dominance:</strong> Ofloxacin and Norfloxacin comprised <strong>36.9%</strong> of all antibiotic recommendations[cite: 4714].</li>
+            [cite_start]<li><strong>Diarrheal Cases:</strong> 76.1% of prescriptions for diarrhea were broad-spectrum "Watch" antibiotics, ignoring standard guidelines[cite: 4717].</li>
+            [cite_start]<li><strong>Pediatric Risk:</strong> Even for infants (0-5 years), Watch category drugs accounted for 59.1% of recommendations[cite: 4721].</li>
         </ul>
 
-        <img src="amr-network.png" alt="Network Correlation Analysis" class="project-img">
-        <p class="caption">Figure 4: Network Correlation Analysis showing the link between Health Literacy Domains and AMR Knowledge.</p>
-
-        <img src="amr-misconceptions.png" alt="Antibiotic Misconceptions" class="project-img">
-        <p class="caption">Figure 6: High rates of misconceptions regarding antibiotic use in the community.</p>
-
-        <h2>Statistical Deep Dive</h2>
-        <p>
-            To identify the drivers of AMR knowledge, we performed extensive statistical modeling. 
-            The analysis highlighted that <strong>Education</strong> was a critical determinant, showing a clear linear relationship with knowledge scores.
-        </p>
-
-        <img src="amr-boxplot.png" alt="Box Plot of AMR Knowledge vs Education" class="project-img">
-        <p class="caption">Figure 5: Box plot demonstrating the positive association between Education Level and AMR Knowledge Scores.</p>
-
-        <h3>Multiple Regression Analysis</h3>
-        <p>
-            We fitted a multiple linear regression model (R² = 0.395) to isolate the predictors of AMR awareness. 
-            Interestingly, while <strong>Education</strong> remained significant, <strong>Occupation</strong> lost its predictive power when controlled for literacy domains.
-        </p>
-
-        <div style="overflow-x: auto; margin-top: 20px; border: 1px solid #eee; border-radius: 8px;">
-            <table style="width: 100%; border-collapse: collapse; font-size: 0.95rem; background: white;">
-                <thead style="background: #1e3c72; color: white;">
-                    <tr>
-                        <th style="padding: 12px; text-align: left;">Predictor</th>
-                        <th style="padding: 12px; text-align: center;">B (Coeff)</th>
-                        <th style="padding: 12px; text-align: center;">p-value</th>
-                        <th style="padding: 12px; text-align: left;">Interpretation</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr style="border-bottom: 1px solid #eee;">
-                        <td style="padding: 12px; font-weight: 600;">Education</td>
-                        <td style="padding: 12px; text-align: center;">0.27</td>
-                        <td style="padding: 12px; text-align: center; color: #d9534f; font-weight: bold;">&lt;.001 **</td>
-                        <td style="padding: 12px; color: #555;">Strongest demographic predictor.</td>
-                    </tr>
-                    <tr style="border-bottom: 1px solid #eee;">
-                        <td style="padding: 12px;">Scale 5: Critical Appraisal</td>
-                        <td style="padding: 12px; text-align: center;">0.51</td>
-                        <td style="padding: 12px; text-align: center; color: #d9534f; font-weight: bold;">&lt;.001 **</td>
-                        <td style="padding: 12px; color: #555;">Strongest HLQ predictor.</td>
-                    </tr>
-                    <tr style="border-bottom: 1px solid #eee;">
-                        <td style="padding: 12px;">Scale 8: Finding Info</td>
-                        <td style="padding: 12px; text-align: center;">0.35</td>
-                        <td style="padding: 12px; text-align: center; color: #d9534f; font-weight: bold;">.001 **</td>
-                        <td style="padding: 12px; color: #555;">Significant positive predictor.</td>
-                    </tr>
-                    <tr style="background-color: #f9f9f9;">
-                        <td style="padding: 12px; color: #888;">Occupation</td>
-                        <td style="padding: 12px; text-align: center; color: #888;">0.11</td>
-                        <td style="padding: 12px; text-align: center; color: #888;">.066</td>
-                        <td style="padding: 12px; color: #888;">Not significant in full model.</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
-        <h2>Part 2: Pharmacist Practices (Supply Side)</h2>
-        <p>
-            Using a simulated client method, we approached 239 pharmacies presenting with symptoms of fever, diarrhea, or respiratory infection. 
-            The analysis revealed a heavy reliance on broad-spectrum antibiotics, often disregarding WHO stewardship guidelines.
-        </p>
-
-        <h3>Heatmap of Dispensing Patterns</h3>
-        <p>
-            Pharmacists frequently recommended antibiotics for conditions where they were not necessary. For diarrheal cases, <strong>56%</strong> of recommendations were for Ofloxacin (a broad-spectrum antibiotic) rather than ORS or Zinc.
-        </p>
-
-        <img src="amr-heatmap.png" alt="Pharmacist Dispensing Heatmap" class="project-img">
-        <p class="caption">Figure 9: Heatmap of pharmacist treatment recommendations by illness type.</p>
-
-        <h3>WHO AWaRe Classification Analysis</h3>
-        <p>
-            The study compared dispensed drugs against the WHO "Access, Watch, Reserve" (AWaRe) classification. 
-            <strong>65.2%</strong> of dispensed antibiotics belonged to the <strong>"Watch"</strong> category (higher resistance potential), far exceeding the WHO recommendation to limit these drugs.
-        </p>
-
-        <img src="amr-aware.png" alt="WHO AWaRe Classification" class="project-img">
-        <p class="caption">Figure 18: Distribution of Access (Blue) vs. Watch (Red) antibiotics.</p>
+        <img src="ppt-aware.png" alt="AWaRe Classification Analysis" class="project-img">
+        <p class="caption">Figure 3: High prevalence of "Watch" category antibiotics (Red) vs "Access" category (Blue).</p>
 
         <h2>Conclusion & Impact</h2>
         <p>
-            The study highlights a "reinforcing cycle" of misuse: low community health literacy drives demand for quick fixes, and unregulated pharmacy practices supply strong antibiotics to meet that demand. 
-            Interventions must target <strong>educational appraisal skills</strong> rather than just generic awareness, and enforce stricter regulations on pharmacy dispensing.
+            The study highlights that AMR is not just a biological issue but a social one. 
+            Low health literacy in the community drives demand for quick fixes, and pharmacists fulfill this demand with strong, inappropriate antibiotics.
+            Effective interventions must target <strong>educational appraisal skills</strong> and enforce stricter dispensing regulations in pharmaceutical hubs like Baddi.
         </p>
 
         <div style="text-align: center; margin-top: 50px;">
@@ -208,4 +151,8 @@
     </div>
 
     <footer style="text-align: center; padding: 40px; color: #888; font-size: 0.9rem;">
-        &copy; 2026
+        &copy; 2026 Sai Teja Muramalla.
+    </footer>
+
+</body>
+</html>

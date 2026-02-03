@@ -76,7 +76,7 @@
             This study addresses the critical gap in AMR awareness by examining it through the lens of <strong>Health Literacy</strong> in Baddi, Himachal Pradesh—a major pharmaceutical industrial hub.
         </p>
         <p>
-            [cite_start]The research explores both the <strong>Demand Side</strong> (community knowledge and behavior) and the <strong>Supply Side</strong> (pharmacist dispensing practices) to understand the drivers of antibiotic misuse[cite: 2282].
+            The research explores both the <strong>Demand Side</strong> (community knowledge and behavior) and the <strong>Supply Side</strong> (pharmacist dispensing practices) to understand the drivers of antibiotic misuse.
         </p>
 
         <div class="metrics-grid">
@@ -101,20 +101,74 @@
         <h2>Part 1: Community Health Literacy (Demand Side)</h2>
         <p>
             We surveyed 450 residents using the <strong>Health Literacy Questionnaire (HLQ)</strong> and a custom AMR knowledge index. 
-            [cite_start]The study found that education was the strongest predictor of AMR knowledge (R² = 0.192), explaining 19% of the variance alone[cite: 2739].
+            The study found that education was the strongest predictor of AMR knowledge (R² = 0.192), explaining 19% of the variance alone.
         </p>
         
         <h3>Key Findings:</h3>
         <ul>
-            [cite_start]<li><strong>Misconceptions:</strong> ~50% of participants believed antibiotics could treat viral infections like colds and flu[cite: 2823].</li>
-            [cite_start]<li><strong>Predictors:</strong> HLQ domains related to "Critical Appraisal" (Domain 5) and "Finding Good Information" (Domain 8) were strongly correlated with better AMR knowledge[cite: 2741].</li>
+            <li><strong>Misconceptions:</strong> ~50% of participants believed antibiotics could treat viral infections like colds and flu.</li>
+            <li><strong>Predictors:</strong> HLQ domains related to "Critical Appraisal" (Domain 5) and "Finding Good Information" (Domain 8) were strongly correlated with better AMR knowledge.</li>
         </ul>
 
-        <img src="assets/images/amr-network.png" alt="Network Correlation Analysis" class="project-img">
-        [cite_start]<p class="caption">Figure 4: Network Correlation Analysis showing the link between Health Literacy Domains and AMR Knowledge[cite: 2730].</p>
+        <img src="amr-network.png" alt="Network Correlation Analysis" class="project-img">
+        <p class="caption">Figure 4: Network Correlation Analysis showing the link between Health Literacy Domains and AMR Knowledge.</p>
 
-        <img src="assets/images/amr-misconceptions.png" alt="Antibiotic Misconceptions" class="project-img">
-        [cite_start]<p class="caption">Figure 6: High rates of misconceptions regarding antibiotic use in the community[cite: 2856].</p>
+        <img src="amr-misconceptions.png" alt="Antibiotic Misconceptions" class="project-img">
+        <p class="caption">Figure 6: High rates of misconceptions regarding antibiotic use in the community.</p>
+
+        <h2>Statistical Deep Dive</h2>
+        <p>
+            To identify the drivers of AMR knowledge, we performed extensive statistical modeling. 
+            The analysis highlighted that <strong>Education</strong> was a critical determinant, showing a clear linear relationship with knowledge scores.
+        </p>
+
+        <img src="amr-boxplot.png" alt="Box Plot of AMR Knowledge vs Education" class="project-img">
+        <p class="caption">Figure 5: Box plot demonstrating the positive association between Education Level and AMR Knowledge Scores.</p>
+
+        <h3>Multiple Regression Analysis</h3>
+        <p>
+            We fitted a multiple linear regression model (R² = 0.395) to isolate the predictors of AMR awareness. 
+            Interestingly, while <strong>Education</strong> remained significant, <strong>Occupation</strong> lost its predictive power when controlled for literacy domains.
+        </p>
+
+        <div style="overflow-x: auto; margin-top: 20px; border: 1px solid #eee; border-radius: 8px;">
+            <table style="width: 100%; border-collapse: collapse; font-size: 0.95rem; background: white;">
+                <thead style="background: #1e3c72; color: white;">
+                    <tr>
+                        <th style="padding: 12px; text-align: left;">Predictor</th>
+                        <th style="padding: 12px; text-align: center;">B (Coeff)</th>
+                        <th style="padding: 12px; text-align: center;">p-value</th>
+                        <th style="padding: 12px; text-align: left;">Interpretation</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="border-bottom: 1px solid #eee;">
+                        <td style="padding: 12px; font-weight: 600;">Education</td>
+                        <td style="padding: 12px; text-align: center;">0.27</td>
+                        <td style="padding: 12px; text-align: center; color: #d9534f; font-weight: bold;">&lt;.001 **</td>
+                        <td style="padding: 12px; color: #555;">Strongest demographic predictor.</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #eee;">
+                        <td style="padding: 12px;">Scale 5: Critical Appraisal</td>
+                        <td style="padding: 12px; text-align: center;">0.51</td>
+                        <td style="padding: 12px; text-align: center; color: #d9534f; font-weight: bold;">&lt;.001 **</td>
+                        <td style="padding: 12px; color: #555;">Strongest HLQ predictor.</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #eee;">
+                        <td style="padding: 12px;">Scale 8: Finding Info</td>
+                        <td style="padding: 12px; text-align: center;">0.35</td>
+                        <td style="padding: 12px; text-align: center; color: #d9534f; font-weight: bold;">.001 **</td>
+                        <td style="padding: 12px; color: #555;">Significant positive predictor.</td>
+                    </tr>
+                    <tr style="background-color: #f9f9f9;">
+                        <td style="padding: 12px; color: #888;">Occupation</td>
+                        <td style="padding: 12px; text-align: center; color: #888;">0.11</td>
+                        <td style="padding: 12px; text-align: center; color: #888;">.066</td>
+                        <td style="padding: 12px; color: #888;">Not significant in full model.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
 
         <h2>Part 2: Pharmacist Practices (Supply Side)</h2>
         <p>
@@ -124,25 +178,25 @@
 
         <h3>Heatmap of Dispensing Patterns</h3>
         <p>
-            Pharmacists frequently recommended antibiotics for conditions where they were not necessary. [cite_start]For diarrheal cases, <strong>56%</strong> of recommendations were for Ofloxacin (a broad-spectrum antibiotic) rather than ORS or Zinc[cite: 3342].
+            Pharmacists frequently recommended antibiotics for conditions where they were not necessary. For diarrheal cases, <strong>56%</strong> of recommendations were for Ofloxacin (a broad-spectrum antibiotic) rather than ORS or Zinc.
         </p>
 
-        <img src="assets/images/amr-heatmap.png" alt="Pharmacist Dispensing Heatmap" class="project-img">
-        [cite_start]<p class="caption">Figure 9: Heatmap of pharmacist treatment recommendations by illness type[cite: 3032].</p>
+        <img src="amr-heatmap.png" alt="Pharmacist Dispensing Heatmap" class="project-img">
+        <p class="caption">Figure 9: Heatmap of pharmacist treatment recommendations by illness type.</p>
 
         <h3>WHO AWaRe Classification Analysis</h3>
         <p>
             The study compared dispensed drugs against the WHO "Access, Watch, Reserve" (AWaRe) classification. 
-            [cite_start]<strong>65.2%</strong> of dispensed antibiotics belonged to the <strong>"Watch"</strong> category (higher resistance potential), far exceeding the WHO recommendation to limit these drugs[cite: 3421].
+            <strong>65.2%</strong> of dispensed antibiotics belonged to the <strong>"Watch"</strong> category (higher resistance potential), far exceeding the WHO recommendation to limit these drugs.
         </p>
 
-        <img src="assets/images/amr-aware.png" alt="WHO AWaRe Classification" class="project-img">
-        [cite_start]<p class="caption">Figure 18: Distribution of Access (Blue) vs. Watch (Red) antibiotics[cite: 3416].</p>
+        <img src="amr-aware.png" alt="WHO AWaRe Classification" class="project-img">
+        <p class="caption">Figure 18: Distribution of Access (Blue) vs. Watch (Red) antibiotics.</p>
 
         <h2>Conclusion & Impact</h2>
         <p>
             The study highlights a "reinforcing cycle" of misuse: low community health literacy drives demand for quick fixes, and unregulated pharmacy practices supply strong antibiotics to meet that demand. 
-            [cite_start]Interventions must target <strong>educational appraisal skills</strong> rather than just generic awareness [cite: 3504][cite_start], and enforce stricter regulations on pharmacy dispensing[cite: 3529].
+            Interventions must target <strong>educational appraisal skills</strong> rather than just generic awareness, and enforce stricter regulations on pharmacy dispensing.
         </p>
 
         <div style="text-align: center; margin-top: 50px;">
@@ -154,8 +208,4 @@
     </div>
 
     <footer style="text-align: center; padding: 40px; color: #888; font-size: 0.9rem;">
-        &copy; 2026 Sai Teja Muramalla.
-    </footer>
-
-</body>
-</html>
+        &copy; 2026
